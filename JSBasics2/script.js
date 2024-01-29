@@ -154,13 +154,61 @@ findFlavour(flavour());
 // console.log(c);
 // console.log(d);
 
-let a = 10;
+// let a = 10;
 
-function increase(a) {
-  a++;
-  console.log(a);
+// function increase(a) {
+//   a++;
+//   //   console.log(a);
+// }
+
+// increase(a);
+// console.log(a);
+
+// iteration through objects
+//for-in
+
+let rectangle = {
+  length: 23,
+  breadth: 12,
+};
+
+for (let key in rectangle) {
+  console.log(key, rectangle[key]);
 }
 
-increase(a);
-console.log(a);
-console.log();
+//for of loop
+
+for (let key of Object.entries(rectangle)) {
+  console.log(key);
+}
+
+//check if some key property is present in object or not
+
+if ("color" in rectangle) {
+  console.log("present");
+} else console.log("absent");
+
+//object cloning
+//iteration
+
+let abc = {
+  x: 10,
+  y: 20,
+  z: 30,
+};
+
+let xyz = {};
+
+for (let key in abc) {
+  xyz[key] = abc[key];
+}
+abc.x++;
+console.log(abc.x);
+
+//assign
+
+let uvw = Object.assign({}, abc);
+
+//spread
+
+let def = { ...abc };
