@@ -114,3 +114,152 @@ let course = courses.find(function (course) {
 });
 
 console.log(course);
+
+//deletion from array
+
+let num = [22, 1, 34, 113, 4, 66];
+
+//from end
+num.pop();
+
+//from start
+num.shift();
+
+//from middle
+num.splice(1, 2);
+
+//emptying an array
+let newArray = [1, 2, 3, 4, 5, 6];
+let newArray2 = newArray;
+console.log(newArray);
+
+//method1
+// newArray = [];
+// console.log(newArray);
+// console.log(newArray2);
+
+//method 2
+// newArray.length = 0;
+// console.log(newArray);
+
+//method 3
+// newArray.splice(0, newArray.length);
+// console.log(newArray);
+
+//method4
+// while (newArray.length > 0) {
+//   newArray.pop();
+// }
+
+// console.log(newArray);
+// console.log(newArray2);
+
+//method5
+// while (newArray.length > 0) {
+//   newArray.shift();
+// }
+// console.log(newArray);
+// console.log(newArray2);
+
+//combining and slicing array
+let num1 = [1, 2, 3, 7, 8];
+let num2 = [4, 5, 6];
+
+let combine = num1.concat(num2);
+console.log(combine);
+
+//slicing
+let slicedArray = combine.slice(2, 6);
+
+let tens = [10, 20, 30, 40, 50, 60, 70, 80];
+
+slicedTens = tens.slice(2, 6);
+// slicedTens = tens.slice(2);
+// slicedTens = tens.slice();
+console.log(slicedTens);
+
+// spread operator
+// let arr1 = [1, 2, 3, 11, 22, 33];
+// let arr2 = [4, 5, 6];
+
+// let combined = [...arr1, "a", "b", ...arr2, "c", true];
+// console.log(combined);
+
+// //joining array
+// let array1 = [10, 20, 30, 40, 50, 60];
+// let joinedArray = array1.join("|");
+
+// console.log(joinedArray);
+
+// let splitedArray = joinedArray.split("|");
+// console.log(splitedArray);
+
+//iterating an array
+
+let marks = [33, 43, 55, 76, 89];
+
+for (let values of marks) {
+  console.log(values);
+}
+
+//forEach loop
+marks.forEach((value) => console.log(value));
+
+//joining array
+let rawArray = [12, 23, 34, 45];
+
+let joinedArray = rawArray.join("!");
+
+let splited = joinedArray.split("!");
+
+//sort array
+let numm = [5, 10, 4, 40];
+console.log(numm.reverse());
+
+console.log(numm.sort());
+console.log(numm.reverse());
+console.log(numm.sort());
+
+//callback functions
+let details = [
+  { no: 1, fName: "bhavya" },
+  { no: 2, fName: "shubham" },
+];
+// details.find(function (detail) {
+//   return detail.fName=='bhavya';
+// });
+
+let detail = details.find((value) => value.fName == "bhavya");
+
+console.log(detail);
+
+//sorting on references
+
+let obj2 = [
+  { fName: "bhavya", lName: "singh" },
+  { fName: "shubham", lName: "kumar" },
+  { fName: "himesh", lName: "singhal" },
+  { fName: "rajesh", lName: "sindhu" },
+];
+
+console.log(obj2);
+
+let obj3 = obj2.sort((a, b) => {
+  if (a.lName > b.lName) {
+    return 1;
+  }
+  if (a.lName < b.lName) {
+    return -1;
+  }
+
+  return 0;
+});
+
+console.log(obj2);
+//filtering arrays
+
+let unfiltered = [12, -22, 23, -43, 0];
+
+let filtered = unfiltered.filter((value) => value >= 0);
+
+console.log(filtered);
