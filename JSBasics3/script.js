@@ -258,8 +258,24 @@ let obj3 = obj2.sort((a, b) => {
 console.log(obj2);
 //filtering arrays
 
-let unfiltered = [12, -22, 23, -43, 0];
+let unfiltered = [2, 22, 23, -2, 12, 4];
 
-let filtered = unfiltered.filter((value) => value >= 0);
+let filtered = unfiltered.filter((value) => {
+  return value > 0 && value <= 22;
+});
 
 console.log(filtered);
+
+//mapping arrays
+let numArr = [7, 8, 9, 10];
+
+let mappedArr = numArr.map((p) => "enroll_No " + p);
+
+console.log(mappedArr);
+
+//mapping arrays on objects
+let Num = [2, 33, -2, -5];
+
+let items = Num.filter((p) => p >= 0).map(function (q) {
+  return { value: q };
+});
