@@ -68,3 +68,21 @@ function interest(p, r = 7, y = 10) {
 console.log(interest(1000, undefined, 8));
 
 //getter ,setters
+let person = {
+  fName: "Bhavya",
+  lName: "Singh",
+  get fullName() {
+    return `${person.fName} ${person.lName}`;
+  },
+
+  set fullName(Name) {
+    let divide = Name.split(" ");
+    this.fName = divide[0];
+    this.lName = divide[1];
+  },
+};
+
+console.log(person);
+
+person.fullName = "Rajkumar Rao ";
+console.log(person.fullName);
