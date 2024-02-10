@@ -239,3 +239,12 @@ let final = 0;
 arr2.forEach((val) => (final = final + val));
 
 console.log(final);
+
+//reducing an arry - reduce() method
+let newArr = [23, 1, 2, 4, 5, 6];
+let initialValue = 0;
+let sumOfArray = newArr.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
+
+console.log(sumOfArray);
