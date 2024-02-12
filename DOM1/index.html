@@ -7,5 +7,25 @@
   </head>
   <body>
     document object model class 1 started
+
+    <h2>Javascript HTML DOM</h2>
+    <div id="main">
+      <p>Finding HTML elements by Tag Name</p>
+      <p>
+        This example demonstrates the
+        <b>getElementsByTagName() and getElementsById()</b>
+      </p>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+      let a = document.getElementById("main");
+      let b = a.getElementsByTagName("p");
+
+      document.getElementById(
+        "demo"
+      ).innerHTML = `The first paragraph (index 0) inside "main" is: ${b[0].innerHTML}`;
+    </script>
   </body>
 </html>
