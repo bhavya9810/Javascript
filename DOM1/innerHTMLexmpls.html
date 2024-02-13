@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The Element object</h1>
+    <h2>innerHTML property</h2>
+
+    <p id="myP">getting HTML content using innerHTML</p>
+    <p>The content of "myP" is :</p>
+    <p id="demo"></p>
+    <p>setting HTML content</p>
+    <p id="setP">setting HTML content</p>
+
+    <p>deleting HTML content</p>
+    <p id="deleteP">deleting HTML content</p>
+
+    <p>printing list or get all descendents HTML content</p>
+
+    <ul id="descList">
+      <li>namaste</li>
+      <li>dev</li>
+      <li>namaste</li>
+      <li>js</li>
+    </ul>
+    <p>Here is the list</p>
+    <p id="descen">printing list or get all descendents HTML content</p>
+
+    <script>
+      //get html content with innerHTML
+      let a = document.getElementById("myP").innerHTML;
+      document.getElementById("demo").innerHTML = a;
+
+      //set the html content using innerHTML
+      document.getElementById("setP").innerHTML =
+        "Hello jee ho gaya na set html content";
+
+      //deleting html content
+      document.getElementById("deleteP").innerHTML = " ";
+
+      let lis = document.getElementById("descList").innerHTML;
+      document.getElementById("descen").innerHTML = lis;
+    </script>
+  </body>
+</html>

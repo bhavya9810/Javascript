@@ -19,6 +19,13 @@
 
     <p id="demo"></p>
 
+    <p>Finding HTML elements using query selector</p>
+    <p class="intro">Hello world !</p>
+    <p class="intro">
+      This example demonstartes the <b>querySelectorAll</b>and
+      <b>querySelector</b>methods
+    </p>
+    <p id="Hello"></p>
     <script>
       let a = document.getElementById("main");
       let b = a.getElementsByTagName("p");
@@ -26,6 +33,10 @@
       document.getElementById(
         "demo"
       ).innerHTML = `The first paragraph (index 0) inside "main" is: ${b[0].innerHTML}`;
+
+      let x = document.querySelectorAll("p.intro");
+
+      document.getElementById("Hello").innerHTML = x[0].innerHTML;
     </script>
   </body>
 </html>

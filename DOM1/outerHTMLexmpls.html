@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>outerHTML Property</title>
+  </head>
+  <body>
+    <h1>outerHTML property</h1>
+    <button onclick="func1()">on click change the element from h1 to h5</button>
+
+    <ul id="outerTry">
+      <li>hello</li>
+      <li>hello jee</li>
+    </ul>
+
+    <script>
+      function func1() {
+        let a = document.getElementsByTagName("h1")[0];
+        let b = document.getElementById("outerTry");
+        a.outerHTML = "<h5>outerHTML property</h5>";
+        alert(b.outerHTML);
+      }
+    </script>
+  </body>
+</html>
