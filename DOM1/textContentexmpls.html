@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>textContentVsinnerTextVsinnerHTML</title>
+  </head>
+  <body>
+    <h1>The Element object</h1>
+    <h2>Difference between innerHTML, innerText and textContent</h2>
+    <p id="sentence">
+      This element contains extra spacing <br />and contains a <b>bold</b> tag
+    </p>
+    <button onclick="getinnerHTML()">innerHTML</button>
+    <button onclick="getinnerText()">innerText</button>
+    <button onclick="gettextContent()">textContent</button>
+
+    <p id="myP"></p>
+
+    <script>
+      function getinnerHTML() {
+        let text = document.querySelector("#sentence").innerHTML;
+        document.getElementById("myP").innerText = text;
+      }
+      function getinnerText() {
+        let text = document.querySelector("#sentence").innerText;
+        document.getElementById("myP").innerText = text;
+      }
+      function gettextContent() {
+        let text = document.querySelector("#sentence").textContent;
+        document.getElementById("myP").innerText = text;
+      }
+    </script>
+  </body>
+</html>
