@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsertAdjacentHtml</title>
+  </head>
+  <body>
+    <h1>insertAdjacentHtml() Method</h1>
+
+    <button onclick="myFunction()">Insert</button>
+    <div>click insert to insert element</div>
+
+    <h2 id="demo">This is paragraph</h2>
+    <script>
+      function myFunction() {
+        let inInsert = document.getElementById("demo");
+        let html = " <span style='color:red'> This is red. </span>";
+        inInsert.insertAdjacentHTML("beforeBegin", html);
+        inInsert.insertAdjacentHTML("afterBegin", html);
+        inInsert.insertAdjacentHTML("afterend", html);
+        inInsert.insertAdjacentHTML("beforeend", html);
+      }
+    </script>
+  </body>
+</html>

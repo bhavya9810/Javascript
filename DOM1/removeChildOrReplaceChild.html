@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove and Replace Child</title>
+  </head>
+  <body>
+    <h2>removeChild() and replaceChild() method</h2>
+    <div id="myDIV">
+      <p id="p1">This is paragraph1</p>
+      <p id="p2">This is paragraph2</p>
+      <p id="p3">This is paragraph3</p>
+      <p id="p4">This is paragraph4</p>
+    </div>
+    <script>
+      let child = document.getElementById("p2");
+      let parent = document.getElementById("myDIV");
+
+      let newChild = document.createElement("p");
+      let text = document.createTextNode("This is new paragraph");
+      newChild.append(text);
+
+      parent.append(newChild);
+
+      parent.removeChild(child);
+    </script>
+  </body>
+</html>

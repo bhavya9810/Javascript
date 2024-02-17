@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="myDIV">This is a paragraph and this is in <b> bold</b> tag</p>
+
+    <div id="hello"></div>
+    <script>
+      let a = document.getElementById("myDIV").innerText;
+      console.log(a);
+      document.getElementById("hello").innerText = a;
+    </script>
+  </body>
+</html>

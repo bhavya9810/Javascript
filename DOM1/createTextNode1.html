@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreateTextNode1</title>
+  </head>
+  <body>
+    <h1>createTextNode() method</h1>
+
+    <ul id="myList">
+      <li>Coffee</li>
+      <li>Tea</li>
+    </ul>
+    <button type="button" onclick="myFunction()">Append</button>
+    <script>
+      function myFunction() {
+        const newElement = document.createElement("li");
+        const newNode = document.createTextNode("ColdDrink");
+        newElement.appendChild(newNode);
+        document.getElementById("myList").appendChild(newElement);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsertAdjacentElement</title>
+  </head>
+  <body>
+    <h1>InsertAdjacentElement() method</h1>
+    <span id="heading4" style="color: red">Heading 4</span>
+    <p>Heading 1</p>
+    <button onclick="myFunction()">Move</button>
+    <script>
+      function myFunction() {
+        const head1 = document.getElementById("heading4");
+        const head4 = document.getElementsByTagName("p")[0];
+        head4.insertAdjacentElement("beforeEnd", head1);
+      }
+    </script>
+  </body>
+</html>

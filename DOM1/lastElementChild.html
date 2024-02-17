@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createTextNode2</title>
+  </head>
+  <body>
+    <h1>createTextNode() method</h1>
+    <h2>Move an item from 1 list to another</h2>
+    <ul id="myList1">
+      <li>Tea</li>
+      <li>Coffee</li>
+    </ul>
+
+    <ul id="myList2">
+      <li>Water</li>
+      <li>Milk</li>
+    </ul>
+
+    <button onclick="myFunction()">Move</button>
+
+    <script>
+      function myFunction() {
+        let element1 = document.getElementById("myList2").lastElementChild;
+        document.getElementById("myList1").appendChild(element1);
+      }
+    </script>
+  </body>
+</html>
