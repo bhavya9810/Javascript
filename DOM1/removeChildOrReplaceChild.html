@@ -15,6 +15,7 @@
     </div>
     <script>
       let child = document.getElementById("p2");
+      let remove = document.getElementById("p4");
       let parent = document.getElementById("myDIV");
 
       let newChild = document.createElement("p");
@@ -24,6 +25,9 @@
       parent.append(newChild);
 
       parent.removeChild(child);
+
+      //to find parent from child
+      let toRemove = remove.parentElement;
     </script>
   </body>
 </html>
