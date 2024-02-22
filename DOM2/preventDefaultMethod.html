@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>preventDefaultMethod</title>
+  </head>
+  <body>
+    <h1>preventDefault() Method</h1>
+
+    <a href="https://www.facebook.com/">Facebook 1</a>
+    <a href="https://www.facebook.com/">Facebook 2</a>
+    <a href="https://www.facebook.com/">Facebook 3</a>
+
+    <script>
+      let links = document.querySelectorAll("a");
+
+      let link = links[2].addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("maza aaya");
+      });
+    </script>
+  </body>
+</html>
