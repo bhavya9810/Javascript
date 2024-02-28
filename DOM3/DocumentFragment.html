@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Fragment</title>
+  </head>
+  <body>
+    <h1>hello jee</h1>
+
+    <ul id="language"></ul>
+
+    <script>
+      const t1 = performance.now();
+
+      let fragment = document.createDocumentFragment();
+      for (let i = 1; i <= 100; i++) {
+        let content = document.createElement("p");
+        content.textContent = "this is para " + i;
+        fragment.appendChild(content);
+      }
+
+      document.body.appendChild(fragment); //here will only be 1 reflow and 1 repaint
+      const t2 = performance.now();
+      console.log("this took " + (t2 - t1) + " ms");
+
+      let languages = ["javascript", "typescript", "c++", "java", "c#"];
+      let list = document.querySelector("#language");
+      let fragment2 = document.createDocumentFragment();
+
+      languages.forEach(function (language) {
+        let item = document.createElement("li");
+        item.innerHTML = language;
+        fragment2.appendChild(item);
+      });
+      list.appendChild(fragment2);
+    </script>
+  </body>
+</html>
